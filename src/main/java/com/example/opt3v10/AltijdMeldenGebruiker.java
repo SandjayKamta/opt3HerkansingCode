@@ -19,7 +19,7 @@ class AltijdMeldenGebruiker extends Gebruiker {
 
     @Override
     protected void voerRegistratieUit() {
-        System.out.println("Registratie uitvoeren...");
+        System.out.println("Registratie wordt uitgevoerd...");
         // Registratielogica voor AltijdMeldenGebruiker
     }
 

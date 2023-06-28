@@ -15,7 +15,7 @@ public class GebruikerView implements Waarnemer {
 
     private StoelenData stoelenData;
 
-    Label aantalStoelen;
+    Label aantalStoelen = new Label();
 
     public GebruikerView(Stage stage, Gebruiker gebruiker, StoelenData stoelenData) {
         this.stage = stage;
@@ -30,7 +30,8 @@ public class GebruikerView implements Waarnemer {
         GridPane gridPane = new GridPane();
 
         Label naamLabel = new Label("Naam: " + gebruiker.getNaam());
-        aantalStoelen = new Label("Aantal stoelen: " + stoelenData.getBeschikbareStoelen());
+        //aantalStoelen = new Label("Aantal stoelen: " + stoelenData.getBeschikbareStoelen());
+       update(stoelenData.getBeschikbareStoelen());
 
         stoelenData.registreerWaarnemer(this);
 

@@ -56,7 +56,12 @@ public class AppController implements Initializable {
 
         gebruikers.add(nieuweGebruiker);
         stoelenData.registreerWaarnemer(nieuweGebruiker);
-        stoelenData.setBeschikbareStoelen(stoelenData.getBeschikbareStoelen() -1);
+        if(stoelenData.getBeschikbareStoelen()>0){
+            stoelenData.setBeschikbareStoelen(stoelenData.getBeschikbareStoelen() -1);
+        }
+        else{
+            System.out.println("Geen beschikbare stoelen meer!");
+        }
         nieuweGebruiker.registreer(); // Gebruiker registreren
         gebruiker.clear();
 

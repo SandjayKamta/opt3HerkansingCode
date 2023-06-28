@@ -3,7 +3,7 @@ package com.example.opt3v10;
 enum StoelVoorkeur {
     ALTIJD, BEREIK;
 
-    public boolean moetMelden(int beschikbareStoelen) {
+   public boolean moetMelden(int beschikbareStoelen) {
         switch (this) {
             case ALTIJD:
                 return true;
